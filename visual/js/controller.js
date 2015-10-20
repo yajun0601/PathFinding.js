@@ -91,8 +91,8 @@ var Controller = StateMachine.create({
 });
 
 $.extend(Controller, {
-    gridSize: [64, 36], // number of nodes horizontally and vertically
-    operationsPerSecond: 300,
+    gridSize: [30, 20], // number of nodes horizontally and vertically
+    operationsPerSecond: 500,
 
     /**
      * Asynchronous transition from `none` state to `ready` state.
@@ -480,6 +480,12 @@ $.extend(Controller, {
 
         this.setStartPos(centerX - 5, centerY);
         this.setEndPos(centerX + 5, centerY);
+
+        this.setWalkableAt(centerX, centerY-2, false);
+        this.setWalkableAt(centerX, centerY-1, false);
+        this.setWalkableAt(centerX, centerY, false);
+        this.setWalkableAt(centerX, centerY+1, false);
+        this.setWalkableAt(centerX, centerY+2, false);
     },
     setStartPos: function(gridX, gridY) {
         this.startX = gridX;

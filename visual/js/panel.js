@@ -63,7 +63,7 @@ var Panel = {
                 });
             }
             break;
-
+/*
         case 'breadthfirst_header':
             allowDiagonal = typeof $('#breadthfirst_section ' +
                                      '.allow_diagonal:checked').val() !== 'undefined';
@@ -158,7 +158,7 @@ var Panel = {
             heuristic = $('input[name=jump_point_heuristic]:checked').val();
 
             weight = parseInt($('#ida_section input[name=astar_weight]').val()) || 1;
-            weight = weight >= 1 ? weight : 1; /* if negative or 0, use 1 */
+            weight = weight >= 1 ? weight : 1; ///  if negative or 0, use 1 
 
             timeLimit = parseInt($('#ida_section input[name=time_limit]').val());
 
@@ -193,7 +193,7 @@ var Panel = {
             });
 
             break;
-
+*/
         }
 
         return finder;
